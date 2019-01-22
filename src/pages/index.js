@@ -59,11 +59,6 @@ export default () => (
           {' '}scoresheets.io
         </Link>
       </p>
-      <p>Writing code at
-        <Link href="https://wpengine.com" rel="noopener noreferrer" target="_blank">
-          {' '}WP Engine
-        </Link>
-      </p>
     </Container>
   </Wrapper>
 )
