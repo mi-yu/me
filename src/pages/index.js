@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 import Wrapper from '../components/Wrapper'
 
 const StyledContainer = styled.div`
@@ -13,15 +14,20 @@ const StyledContainer = styled.div`
 `
 
 const Title = styled.h1.attrs({
-  transform: props => calculateTransform(props)
+  transform: props => calculateTransform(props),
 })`
   font-size: 4rem;
   font-weight: 200;
   transform: ${props => props.transform};
 `
 
-const calculateTransform = ({ screenWidth, screenHeight, clientX, clientY }) => {
-  const skewAmt = 75 * (screenWidth / 2 - clientX) / screenWidth
+const calculateTransform = ({
+  screenWidth,
+  screenHeight,
+  clientX,
+  clientY,
+}) => {
+  const skewAmt = (75 * (screenWidth / 2 - clientX)) / screenWidth
   if (clientY > screenHeight / 2) {
     return `scale(1, -1) skew(${skewAmt}deg)`
   }
@@ -29,17 +35,19 @@ const calculateTransform = ({ screenWidth, screenHeight, clientX, clientY }) => 
   return `skew(${skewAmt}deg)`
 }
 
-const Container = (props) => {
+const Container = props => {
   // console.log(React.Children.map(props.children, child => React.cloneElement(child, { ...props })))
   const { screenWidth, screenHeight, clientX, clientY } = props
   return (
     <StyledContainer>
-      {React.Children.map(props.children, child => React.cloneElement(child, {
-        screenWidth,
-        screenHeight,
-        clientX,
-        clientY
-      }))}
+      {React.Children.map(props.children, child =>
+        React.cloneElement(child, {
+          screenWidth,
+          screenHeight,
+          clientX,
+          clientY,
+        })
+      )}
     </StyledContainer>
   )
 }
@@ -54,10 +62,19 @@ export default () => (
     <Container>
       <Title>MICHAEL YU</Title>
       <p>2nd year Turing Scholar at UT Austin</p>
-      <p>Working on
-        <Link href="https://scoresheets.io" rel="noopener noreferrer" target="_blank">
-          {' '}scoresheets.io
+      <p>
+        Working on
+        <Link
+          href="https://scoresheets.io"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {' '}
+          scoresheets.io
         </Link>
+      </p>
+      <p>
+        <Link href={withPrefix('./resume.pdf')}>Resume</Link>
       </p>
     </Container>
   </Wrapper>
