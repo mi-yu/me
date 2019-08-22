@@ -61,20 +61,28 @@ export default () => (
   <Wrapper>
     <Container>
       <Title>MICHAEL YU</Title>
-      <p>2nd year Turing Scholar at UT Austin</p>
+      <p>3rd year Turing Scholar at UT Austin</p>
       <p>
         Working on
         <Link
-          href="https://scoresheets.io"
+          href="https://draped.co"
           rel="noopener noreferrer"
           target="_blank"
         >
           {' '}
-          scoresheets.io
+          draped.co
         </Link>
       </p>
       <p>
-        <Link href={withPrefix('./resume.pdf')}>Resume</Link>
+        See my
+        <Link
+          href={withPrefix('./resume.pdf')}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {' '}
+          resume
+        </Link>
       </p>
     </Container>
   </Wrapper>

@@ -1,20 +1,20 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "me",
+  "description": "Personal website",
+  "version": "1.1.0",
+  "author": "Michael Yu <m.yu8088@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.1.4",
-    "gatsby-link": "^2.0.10",
-    "gatsby-plugin-react-helmet": "^3.0.6",
-    "gatsby-plugin-styled-components": "^3.0.5",
-    "gatsby-plugin-typography": "^2.2.7",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.18",
-    "styled-components": "^4.1.3",
-    "typography": "^0.16.18"
+    "gatsby": "^2.13.75",
+    "gatsby-link": "^2.2.7",
+    "gatsby-plugin-react-helmet": "^3.1.4",
+    "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-plugin-typography": "^2.3.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
+    "styled-components": "^4.3.2",
+    "typography": "^0.16.19"
   },
   "keywords": [
     "gatsby"
@@ -27,10 +27,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/mi-yu/me"
   }
 }
